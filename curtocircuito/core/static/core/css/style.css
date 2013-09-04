@@ -297,6 +297,7 @@ header {
 .team > h2,
 .contact-page > h2,
 .blog > h2,
+.blog > h1,
 .single-work > h2,
 .about-us-section > h2 {
 	color: #000;
@@ -312,6 +313,7 @@ header {
 .team > h2 span,
 .contact-page > h2 span,
 .blog > h2 span,
+.blog > h1 span,
 .single-work > h2 span,
 .about-us-section > h2 span {
 	display: inline-block;
