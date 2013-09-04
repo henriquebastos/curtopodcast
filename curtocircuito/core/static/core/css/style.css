@@ -1395,7 +1395,8 @@ ul.tab-list li {
 	/*line-height: 14px;*/
 }
 
-.blog-post .post-content > img {
+.blog-post .post-content > img,
+.blog-post .post-content > a > img{
 	width: 100%;
 	margin-bottom: 20px;
 }
