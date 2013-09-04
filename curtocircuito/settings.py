@@ -136,9 +136,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'suit',
     'django.contrib.admin',
+    'tagging',
     'mptt',
     'south',
     'curtocircuito.core',
+    'zinnia',
+    'tinymce',
 )
 
 # A sample logging configuration. The only tangible logging
