@@ -86,6 +86,10 @@ body {
 /* 3 Header
 /*-------------------------------------------------*/
 
+header {
+    margin-bottom: 8.5em;
+}
+
 .navbar-fixed-top {
 	position: fixed;
 	z-index: 9999999;
