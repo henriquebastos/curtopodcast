@@ -10,3 +10,4 @@ django-storages==1.1.8
 django-suit==0.2.4
 django-tinymce==1.5.1
 docutils==0.11
+gunicorn==18.0
