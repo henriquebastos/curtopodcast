@@ -1,5 +1,6 @@
 # coding: utf-8
 # Django settings for curtocircuito project.
+import os
 from decouple import Config
 from dj_database_url import parse as db_url
 from unipath import Path
@@ -7,7 +8,14 @@ from memcacheify import memcacheify
 
 PROJECT_ROOT = Path(__file__).parent
 
-config = Config(PROJECT_ROOT.child('settings.ini'))
+
+# Workaround to use heroku while decouple doesn't support it.
+def config(param, default=None, cast=lambda v: v):
+    value = os.environ.get(param, default)
+    return cast(value)
+
+# config = Config(PROJECT_ROOT.child('settings.ini'))
+
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 TEMPLATE_DEBUG = DEBUG
