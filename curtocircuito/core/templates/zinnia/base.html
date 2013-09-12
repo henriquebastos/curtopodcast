@@ -1,4 +1,4 @@
-{% load zinnia_tags %}
+{% load zinnia_tags staticfiles %}
 <!DOCTYPE html>
 <html lang="pt-BR" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
@@ -16,12 +16,12 @@
 
     {% block meta %}{% endblock %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}core/css/fonts.css" type="text/css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}core/css/bootstrap.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}core/css/bootstrap-responsive.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="{{ STATIC_URL }}core/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static "core/css/fonts.css" %}" type="text/css">
+    <link rel="stylesheet" href="{% static "core/css/bootstrap.css" %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static "core/css/bootstrap-responsive.css" %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static "core/css/style.css" %}" type="text/css" media="screen">
     <link rel="pingback" href="/xmlrpc/" />
-    <link rel="shortcut icon" href="{{ STATIC_URL }}zinnia/img/favicon.ico" />
+    <link rel="shortcut icon" href="{% static "zinnia/img/favicon.ico" %}" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
 
     {% block link %}
@@ -59,7 +59,7 @@
                         </button>
                         <div class="logo">
                             <a class="brand" href="/">
-                                <img alt="" src="{{ STATIC_URL }}core/img/logo.png">
+                                <img alt="" src="{% static "core/img/logo.png" %}">
                             </a>
                         </div>
                         <div class="nav-collapse collapse">
@@ -115,10 +115,10 @@
                             </form>
                             <!--End mc_embed_signup-->
 
-                            <a href="http://facebook.com/curtopodcast" alt="Facebook"><img src="{{ STATIC_URL }}core/img/ico-facebook-dark.png" />  </a>
-                            <a href="http://twitter.com/curtopodcast" alt="Twitter"> <img src="{{ STATIC_URL }}core/img/ico-twitter-dark.png" />  </a>
-                            <a href="https://plus.google.com/b/104447350259243628172/104447350259243628172/posts" alt="Google+"><img src="{{ STATIC_URL }}core/img/ico-google-dark.png" />  </a>
-                            <a href="{% url 'zinnia_entry_latest_feed' %}" alt="RSS"><img src="{{ STATIC_URL }}core/img/ico-rss-dark.png" /></a>
+                            <a href="http://facebook.com/curtopodcast" alt="Facebook"><img src="{% static "core/img/ico-facebook-dark.png" %}" />  </a>
+                            <a href="http://twitter.com/curtopodcast" alt="Twitter"> <img src="{% static "core/img/ico-twitter-dark.png" %}" />  </a>
+                            <a href="https://plus.google.com/b/104447350259243628172/104447350259243628172/posts" alt="Google+"><img src="{% static "core/img/ico-google-dark.png" %}" />  </a>
+                            <a href="{% url 'zinnia_entry_latest_feed' %}" alt="RSS"><img src="{% static "core/img/ico-rss-dark.png" %}" /></a>
 
                         </div>
 
