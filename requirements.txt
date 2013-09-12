@@ -11,3 +11,4 @@ django-suit==0.2.4
 django-tinymce==1.5.1
 docutils==0.11
 gunicorn==18.0
+django-heroku-memcacheify==0.4
