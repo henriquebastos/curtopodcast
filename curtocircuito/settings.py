@@ -118,6 +118,7 @@ INSTALLED_APPS = (
     'storages',
     'curtocircuito.core',
     'zinnia',
+    'curtocircuito.entry',
     'tinymce',
 )
 
@@ -171,3 +172,5 @@ else:
 
 
 CACHES = memcacheify()
+
+ZINNIA_ENTRY_BASE_MODEL = 'curtocircuito.entry.models.TimelessEntry'

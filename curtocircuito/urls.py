@@ -6,6 +6,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^', include('zinnia.urls')),
+    url(r'^', include('curtocircuito.entry.urls')),
     url(r'^', include('curtocircuito.core.sitemaps_urls')),
 )
