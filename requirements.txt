@@ -14,4 +14,4 @@ gunicorn==18.0
 pylibmc
 psycopg2
 django-heroku-memcacheify==0.4
-
+dj-static==0.0.5
