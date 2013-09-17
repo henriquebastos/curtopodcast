@@ -49,7 +49,7 @@
             <guid>{{ item.audio }}</guid>
 
             <itunes:author>Diego Dukão / Henrique Bastos</itunes:author>
-            <itunes:summary>{{ item.excerpt|default:item.html_content|striptags }}
+            <itunes:summary>{{ item.excerpt|default:item.html_content|striptags|safe }}
             </itunes:summary>
             <itunes:image href="{{ item.full_image_url }}"/>
             <itunes:duration>{{ item.duration|time:"H:i:s" }}</itunes:duration>
