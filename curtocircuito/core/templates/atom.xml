@@ -36,7 +36,7 @@
         </itunes:owner>
         <itunes:block>no</itunes:block>
         <itunes:explicit>no</itunes:explicit>
-        <itunes:image href="http://grokpodcast.com/images/logo_itunes_grande.png"/>
+        <itunes:image href="http://www.curtocircuito.cc/static/core/img/itunes-image.png"/>
 
         {% for item in entries %}
         <item>
