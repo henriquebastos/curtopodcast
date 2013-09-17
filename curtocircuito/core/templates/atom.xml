@@ -9,47 +9,51 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
-        <title>Curto Circuito Podcast</title>
+        <title><![CDATA[Curto Circuito Podcast]]></title>
         <atom:link href="http://www.curtocircuito.cc/atom.xml" rel="self" type="application/rss+xml"/>
-        <link>http://curtocircuito.cc</link>
-        <description>Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".</description>
+        <link><![CDATA[http://curtocircuito.cc]]></link>
+        <description>
+            <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
+        </description>
         <lastBuildDate>{{ lastBuildDate|date:"r" }}</lastBuildDate>
         <sy:updatePeriod>hourly</sy:updatePeriod>
         <sy:updateFrequency>1</sy:updateFrequency>
-        <language>pt-BR</language>
-        <copyright>Attribution-ShareAlike 3.0 (CC BY-SA 3.0)</copyright>
+        <language>pt-br</language>
+        <copyright><![CDATA[Attribution-ShareAlike 3.0 (CC BY-SA 3.0)]]></copyright>
         <managingEditor>henrique@bastos.net (Henrique Bastos)</managingEditor>
-        <webMaster>henrique@bastos.net (Henrique Bastos)</webMaster>
+        <webMaster><![CDATA[henrique@bastos.net (Henrique Bastos)]]></webMaster>
 
         <itunes:new-feed-url>http://www.curtocircuito.cc/atom.xml</itunes:new-feed-url>
         <itunes:subtitle></itunes:subtitle>
-        <itunes:summary>Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".</itunes:summary>
+        <itunes:summary>
+            <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
+        </itunes:summary>
         <itunes:keywords></itunes:keywords>
         <itunes:category text="Technology">
             <itunes:category text="Podcasting"/>
         </itunes:category>
         <itunes:category text="Technology"/>
-        <itunes:author>Diego Dukão / Henrique Bastos</itunes:author>
+        <itunes:author><![CDATA[Diego Dukão / Henrique Bastos]]></itunes:author>
         <itunes:owner>
-            <itunes:name>Diego Dukão / Henrique Bastos</itunes:name>
-            <itunes:email>henrique@bastos.net</itunes:email>
+            <itunes:name><![CDATA[Diego Dukão / Henrique Bastos]]></itunes:name>
+            <itunes:email><![CDATA[henrique@bastos.net]]></itunes:email>
         </itunes:owner>
-        <itunes:block>no</itunes:block>
-        <itunes:explicit>no</itunes:explicit>
         <itunes:image href="http://www.curtocircuito.cc/static/core/img/itunes-image.png"/>
+        <itunes:explicit><![CDATA[No]]></itunes:explicit>
 
         {% for item in entries %}
         <item>
-            <link>{{ item.full_url }}</link>
-            <title>{{ item.title }}</title>
+            <link><![CDATA[{{ item.full_url }}]]></link>
+            <title><![CDATA[{{ item.title }}]]></title>
             <pubDate>{{ item.creation_date|date:"r" }}</pubDate>
             <description><![CDATA[{{ item.excerpt|default:item.html_content|safe }}]]></description>
 
             <enclosure url="{{ item.audio }}" length="1" type="audio/mpeg"/>
             <guid>{{ item.audio }}</guid>
 
-            <itunes:author>Diego Dukão / Henrique Bastos</itunes:author>
-            <itunes:summary>{{ item.excerpt|default:item.html_content|safe|striptags }}
+            <itunes:author><![CDATA[Diego Dukão / Henrique Bastos]]></itunes:author>
+            <itunes:summary>
+                <![CDATA[{{ item.excerpt|default:item.html_content|safe|striptags }}]]>
             </itunes:summary>
             <itunes:image href="{{ item.full_image_url }}"/>
             <itunes:duration>{{ item.duration|time:"H:i:s" }}</itunes:duration>
