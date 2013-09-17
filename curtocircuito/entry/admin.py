@@ -9,7 +9,7 @@ class CustomEntryAdmin(EntryAdmin):
     # Add audio to Content
     # Move slug from Publication to Content
     fieldsets = \
-        ((_('Content'), {'fields': ('title', 'content', 'image', 'status', 'audio', 'slug')}),) + \
+        ((_('Content'), {'fields': ('title', 'content', 'image', 'status', 'audio', 'slug', 'duration')}),) + \
         EntryAdmin.fieldsets[1:-1] + \
         ((_('Publication'), {'fields': ('categories', 'tags', 'sites')}),)
 

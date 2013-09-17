@@ -52,7 +52,7 @@
             <itunes:summary>{{ item.excerpt|default:item.html_content|striptags }}
             </itunes:summary>
             <itunes:image href="{{ item.full_image_url }}"/>
-            <itunes:duration>59:00</itunes:duration>
+            <itunes:duration>{{ item.duration|time:"H:i:s" }}</itunes:duration>
             <itunes:keywords>{{ item.tags }}</itunes:keywords>
         </item>
         {% endfor %}

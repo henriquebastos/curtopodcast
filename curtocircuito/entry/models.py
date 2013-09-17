@@ -15,6 +15,7 @@ class TimelessEntry(EntryAbstractClass):
     """
     slug = models.SlugField(_('slug'), max_length=255, unique=True, help_text=_("Used to build the entry's URL."))
     audio = models.URLField(blank=True, null=True)
+    duration = models.TimeField(blank=True, null=True)
 
     class Meta(EntryAbstractClass.Meta):
         """
