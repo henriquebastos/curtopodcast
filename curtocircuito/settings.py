@@ -171,3 +171,5 @@ ZINNIA_ENTRY_BASE_MODEL = 'curtocircuito.entry.models.TimelessEntry'
 SOUTH_MIGRATION_MODULES = {
     'zinnia': 'curtocircuito.entry.south',
 }
+
+SOUTH_TESTS_MIGRATE = False
