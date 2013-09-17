@@ -18,8 +18,8 @@
         <sy:updateFrequency>1</sy:updateFrequency>
         <language>pt-BR</language>
         <copyright>Attribution-ShareAlike 3.0 (CC BY-SA 3.0)</copyright>
-        <managingEditor>henrique@bastos.net</managingEditor>
-        <webMaster>henrique@bastos.net</webMaster>
+        <managingEditor>henrique@bastos.net (Henrique Bastos)</managingEditor>
+        <webMaster>henrique@bastos.net (Henrique Bastos)</webMaster>
 
         <itunes:new-feed-url>http://www.curtocircuito.cc/atom.xml</itunes:new-feed-url>
         <itunes:subtitle></itunes:subtitle>
