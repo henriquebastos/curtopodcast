@@ -10,4 +10,4 @@ def atom(request):
         lastBuildDate=datetime.utcnow().replace(tzinfo=pytz.utc),
         entries=Entry.published.all(),
     )
-    return render(request, 'atom.xml', context, content_type='text/xml')
+    return render(request, 'atom.xml', context, content_type='application/rss+xml')

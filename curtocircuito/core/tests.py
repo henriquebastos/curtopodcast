@@ -26,3 +26,6 @@ class AtomTest(TestCase):
 
     def test_complete_context(self):
         self.assertNotContains(self.resp, settings.TEMPLATE_STRING_IF_INVALID)
+
+    def test_content_type(self):
+        self.assertEqual(self.resp['Content-Type'], 'application/rss+xml')
