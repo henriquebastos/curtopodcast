@@ -17,7 +17,7 @@ def config(param, default=None, cast=lambda v: v):
 # config = Config(PROJECT_ROOT.child('settings.ini'))
 
 
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = os.environ.get('DEBUG', '') == 'True'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
