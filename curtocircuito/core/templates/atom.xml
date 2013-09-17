@@ -53,7 +53,7 @@
             </itunes:summary>
             <itunes:image href="{{ item.full_image_url }}"/>
             <itunes:duration>{{ item.duration|time:"H:i:s" }}</itunes:duration>
-            <itunes:keywords>{{ item.tags }}</itunes:keywords>
+            {% if item.tags %}<itunes:keywords>{{ item.tags }}</itunes:keywords>{% endif %}
         </item>
         {% endfor %}
 
