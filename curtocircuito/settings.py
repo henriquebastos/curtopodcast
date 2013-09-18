@@ -167,6 +167,7 @@ AWS_S3_SECURE_URLS=False
 
 MEDIA_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 STATIC_URL = '/static/'
+STATIC_ROOT = PROJECT_ROOT.child('static')
 
 
 CACHES = memcacheify()
