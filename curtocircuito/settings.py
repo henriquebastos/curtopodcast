@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'zinnia',
     'curtocircuito.entry',
     'tinymce',
+    'clear_cache',
 )
 
 # A sample logging configuration. The only tangible logging
