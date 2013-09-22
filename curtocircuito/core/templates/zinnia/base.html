@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{% static "core/css/bootstrap.css" %}" type="text/css" media="screen">
     <link rel="stylesheet" href="{% static "core/css/bootstrap-responsive.css" %}" type="text/css" media="screen">
     <link rel="stylesheet" href="{% static "core/css/style.css" %}" type="text/css" media="screen">
-    <link rel="pingback" href="/xmlrpc/" />
     <link rel="shortcut icon" href="{% static "core/img/favicon.ico" %}" />
     <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
 
@@ -72,6 +71,9 @@
                                 </li>
                                 <li>
                                     <a href="#contato">Contato</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'atom' %}" alt="RSS">RSS</a>
                                 </li>
                             </ul>
                         </div>
