@@ -115,7 +115,7 @@ INSTALLED_APPS = (
     'curtocircuito.core',
     'zinnia',
     'curtocircuito.entry',
-    'tinymce',
+    #'tinymce',
     'clear_cache',
 )
 
@@ -176,3 +176,4 @@ SOUTH_TESTS_MIGRATE = False
 
 ZINNIA_PING_EXTERNAL_URLS = False
 ZINNIA_SAVE_PING_DIRECTORIES = False
+ZINNIA_WYSIWYG = None
