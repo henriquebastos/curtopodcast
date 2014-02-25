@@ -5,7 +5,7 @@ Unipath==1.0
 boto==2.11.0
 dj-database-url==0.2.2
 django-blog-zinnia==0.12.3
-django-decouple==2.1
+python-decouple==2.2
 django-storages==1.1.8
 django-suit==0.2.4
 django-tinymce==1.5.1
