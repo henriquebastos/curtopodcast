@@ -477,6 +477,7 @@
     margin-left: 20px;
   }
   .container,
+  .navbar .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
@@ -822,6 +823,7 @@
   .dl-horizontal dd {
     margin-left: 0;
   }
+  .nav-bar .container,
   .container {
     width: auto;
   }
@@ -967,10 +969,10 @@
   .navbar-fixed-bottom .navbar-inner {
     padding: 5px;
   }
-  .navbar .container {
-    width: auto;
-    padding: 0;
-  }
+  /*.navbar .container {*/
+    /*width: auto;*/
+    /*padding: 0;*/
+  /*}*/
   .navbar .brand {
     padding-right: 10px;
     padding-left: 10px;
