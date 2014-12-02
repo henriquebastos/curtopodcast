@@ -28,8 +28,13 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('Facebook', 'http://facebook.com/curtopodcast'),
+    ('Twitter', 'http://twitter.com/curtopodcast'),
+    ('Google+', 'https://plus.google.com/b/104447350259243628172/104447350259243628172/posts'),
+)
+
+TWITTER_USERNAME="curtopodcast"
 
 DEFAULT_PAGINATION = False
 
