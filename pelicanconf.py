@@ -50,3 +50,5 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 THEME = "themes/cc"
 
+ITUNES_URL = 'https://itunes.apple.com/us/podcast/curto-circuito-podcast/id712723389'
+
