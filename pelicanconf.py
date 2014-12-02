@@ -50,6 +50,12 @@ ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
+TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+
+DIRECT_TEMPLATES = ('index',)
 
 THEME = "themes/cc"
 
