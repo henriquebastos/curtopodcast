@@ -48,3 +48,5 @@ ARTICLE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
+THEME = "themes/cc"
+
