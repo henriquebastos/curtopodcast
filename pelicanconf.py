@@ -7,6 +7,7 @@ SITENAME = 'Curto Circuito Podcast'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['images', 'episodes']
 
 TIMEZONE = 'America/Sao_Paulo'
 
