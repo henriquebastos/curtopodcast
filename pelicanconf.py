@@ -14,7 +14,8 @@ TIMEZONE = 'America/Sao_Paulo'
 DEFAULT_LANG = 'pt'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'atom.xml'
+FEED_DOMAIN = SITEURL
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
