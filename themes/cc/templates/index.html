@@ -1,12 +1,10 @@
-{% extends "zinnia/base.html" %}
-{% load zinnia_tags %}
+{% extends "base.html" %}
 
-{% block meta-description %}Últimos episódios {% if page_obj and page_obj.number != 1 %} página {{ page_obj.number }}
-{% endif %}{% endblock %}
+{% block meta_description %}Últimos episódios{% endblock %}
 
  {% block content %}
-    {% for object in object_list %}
-        <h2><span><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></span></h2>
+    {% for article in dates %}
+        <h2><span><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></span></h2>
         <div class="row-fluid">
             <!-- Blog box -->
             <div class="span8 single-post">
@@ -14,11 +12,11 @@
                 <!-- Blog post -->
                 <div class="blog-post image-post">
                     <div class="post-content">
-                        <a href="{{ object.get_absolute_url }}"><img alt="" src="{{ object.image.url }}"></a>
+                        <a href="{{ SITEURL }}/{{ article.url }}"><img alt="{{ article.title }}" src="{{ article.thumbnail }}"></a>
 
-                        {{ object.html_content|truncatewords_html:50|safe }}
+                        {{ article.summary or article.content|truncate(400) }}
 
-                        <p><a href="{{ object.get_absolute_url }}">Leia mais...</a></p>
+                        <p><a href="{{ SITEURL }}/{{ article.url }}">Leia mais...</a></p>
                     </div>
                 </div>
             </div>

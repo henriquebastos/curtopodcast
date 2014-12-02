@@ -1,8 +1,7 @@
-{% load zinnia_tags staticfiles %}
 <!DOCTYPE html>
 <html lang="pt-BR" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-    <title>{% block title %}Curto Circuito Podcast{% endblock %}</title>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 
     <meta charset="utf-8">
 
@@ -10,27 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
-    <meta name="description" content="{% block meta-description %}{% endblock %}" />
-    <meta name="keywords" content="{% block meta-keywords %}{% get_tags as entry_tags %}{{ entry_tags|join:", "}}{% endblock %}" />
-    <meta name="author" content="Henrique Bastos" />
+    <meta name="description" content="{% block meta_description %}{% endblock %}" />
+    <meta name="author" content="{{ AUTHOR }}" />
 
     {% block meta %}{% endblock %}
 
-    <link rel="stylesheet" href="{% static "core/css/fonts.css" %}" type="text/css">
-    <link rel="stylesheet" href="{% static "core/css/bootstrap.css" %}" type="text/css" media="screen">
-    <link rel="stylesheet" href="{% static "core/css/bootstrap-responsive.css" %}" type="text/css" media="screen">
-    <link rel="stylesheet" href="{% static "core/css/style.css" %}" type="text/css" media="screen">
-    <link rel="shortcut icon" href="{% static "core/img/favicon.ico" %}" />
-    <link rel="home" href="{% url 'zinnia_entry_archive_index' %}" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css" media="screen">
+    <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico" />
+    <link rel="home" href="{{ SITEURL }}" />
 
     {% block link %}
-        <link rel="index" href="{% url 'zinnia_entry_archive_index' %}" />
+        <link rel="index" href="{{ SITEURL }}" />
         <link rel="author" type="text/plain" href="http://henriquebastos.net" />
-        <link rel="EditURI" type="application/rsd+xml" href="{% url 'zinnia_rsd' %}" />
-        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% url 'zinnia_wlwmanifest' %}" />
-        <link rel="search" type="application/opensearchdescription+xml" title="Curto Circuito Podcast" href="{% url 'zinnia_opensearch' %}" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{% url 'zinnia_entry_latest_feed' %}" />
-        {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
     {% endblock %}
 
 
@@ -58,7 +51,7 @@
                         </button>
                         <div class="logo">
                             <a class="brand" href="/">
-                                <img alt="" src="{% static "core/img/logo.png" %}">
+                                <img alt="" src="{{ SITEURL }}/theme/img/logo.png">
                             </a>
                         </div>
                         <div class="nav-collapse collapse">
@@ -73,10 +66,10 @@
                                     <a href="#contato">Contato</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'atom' %}" alt="RSS">RSS</a>
+                                    <a href="{{ SITEURL }}/atoms.xml" alt="RSS">RSS</a>
                                 </li>
                                 <li>
-                                    <a href="https://itunes.apple.com/us/podcast/curto-circuito-podcast/id712723389" alt="iTunes">iTunes</a>
+                                    <a href="{{ ITUNES_URL }}" alt="iTunes">iTunes</a>
                                 </li>
                             </ul>
                         </div>
@@ -120,10 +113,10 @@
                             </form>
                             <!--End mc_embed_signup-->
 
-                            <a href="http://facebook.com/curtopodcast" alt="Facebook"><img src="{% static "core/img/ico-facebook-dark.png" %}" />  </a>
-                            <a href="http://twitter.com/curtopodcast" alt="Twitter"> <img src="{% static "core/img/ico-twitter-dark.png" %}" />  </a>
-                            <a href="https://plus.google.com/b/104447350259243628172/104447350259243628172/posts" alt="Google+"><img src="{% static "core/img/ico-google-dark.png" %}" />  </a>
-                            <a href="{% url 'atom' %}" alt="RSS"><img src="{% static "core/img/ico-rss-dark.png" %}" /></a>
+                            <a href="http://facebook.com/curtopodcast" alt="Facebook"><img src={{ SITEURL }}/theme/img/ico-facebook-dark.png" />  </a>
+                            <a href="http://twitter.com/curtopodcast" alt="Twitter"> <img src="{{ SITEURL }}/theme/img/ico-twitter-dark.png" />  </a>
+                            <a href="https://plus.google.com/b/104447350259243628172/104447350259243628172/posts" alt="Google+"><img src="{{ SITEURL }}/theme/img/ico-google-dark.png" />  </a>
+                            <a href="{{ SITEURL }}/atoms.xml" alt="RSS"><img src="{{ SITEURL }}/theme/img/ico-rss-dark.png" /></a>
 
                         </div>
 
@@ -132,7 +125,7 @@
                             <h3><span>Últimos</span> Tweets</h3>
                             <!-- BEGIN: Twitter website widget (http://twitterforweb.com) -->
                             <div style="width:220px;font-size:8px;text-align:right;"><script type="text/javascript">
-                                document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username=curtopodcast&settings=1,0,3,220,320,f4f4f4,0,000000,101010,1,2,336699' type='text/javascript'%3E%3C/script%3E"));</script>
+                                document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username={{ TWITTER_USERNAME }}&settings=1,0,3,220,320,f4f4f4,0,000000,101010,1,2,336699' type='text/javascript'%3E%3C/script%3E"));</script>
                             </div>
                             <!-- END: Twitter website widget (http://twitterforweb.com) -->
                         </div>
@@ -148,7 +141,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-43277110-1', 'curtocircuito.cc');
+            ga('create', '{{ GOOGLE_ANALYTICS }}', 'curtocircuito.cc');
             ga('send', 'pageview');
         </script>
     </div>
