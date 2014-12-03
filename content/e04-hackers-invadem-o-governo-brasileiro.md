@@ -1,9 +1,9 @@
 Title: Hackers invadem o Governo Brasileiro
 Date: 2014-02-18
 Summary: É isso mesmo! O Governo Brasileiro foi invadido por hackers e eles estão publicando tudo quanto é dado. Transparência, dados abertos, hackathons, grupos de discussões de propostas de leis, mineiração de dados públicos e muitas outras iniciativas estão se tornando cada vez mais frequentes na esfera pública com o engajamento dessa galera.
-Image: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/img-banner-e06.jpg
-Thumbnail: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/img-banner-e06.jpg
-Audio: http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3
+Image: /images/e04.jpg
+Thumbnail: /images/e04.jpg
+Audio: http://curtocircuito.cc/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3
 Duration: 01:07:44
 
 É isso mesmo! O Governo Brasileiro foi invadido por hackers e eles estão publicando tudo quanto é dado. Transparência, dados abertos, hackathons, grupos de discussões de propostas de leis, mineiração de dados públicos e muitas outras iniciativas estão se tornando cada vez mais frequentes na esfera pública com o engajamento dessa galera.
@@ -20,9 +20,9 @@ Ouça e participe!
 
 []'s, [HB](https://twitter.com/henriquebastos)
 
-[!audio?type="audio/mpeg"](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3)
+[!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3)
 
-[Download do episódio](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3)
+[Download do episódio](http://curtocircuito.cc/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3)
 
 Edição: [Bruno Bastos](http://brucebastos.com/)
 

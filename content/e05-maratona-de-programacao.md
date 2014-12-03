@@ -1,9 +1,9 @@
 Title: Maratona de Programação
 Date: 2014-03-12
 Summary: A Maratona de Programação é uma dentre várias iniciativas fantásticas que proporcionam o contato com os mais variados desafios computacionais.
-Image: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/img-banner-e05.jpg
-Thumbnail: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/img-banner-e05.jpg
-Audio: http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e05-maratona-de-programacao.mp3
+Image: /images/e05.jpg
+Thumbnail: /images/e05.jpg
+Audio: http://curtocircuito.cc/episodes/curtocircuito-e05-maratona-de-programacao.mp3
 Duration: 00:53:10
 
 Aprender qualquer assunto exige prática, muita prática! Com programação não é diferente. Praticar é fundamental.
@@ -20,9 +20,9 @@ Ouve aê e bora conversar nos comentários!
 
 []'s, HB!
 
-[!audio?type="audio/mpeg"](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e05-maratona-de-programacao.mp3)
+[!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e05-maratona-de-programacao.mp3)
 
-[Download do episódio](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e05-maratona-de-programacao.mp3)
+[Download do episódio](http://curtocircuito.cc/episodes/curtocircuito-e05-maratona-de-programacao.mp3)
 
 Edição: [Bruno Bastos](http://brucebastos.com/)
 

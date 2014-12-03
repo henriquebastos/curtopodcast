@@ -1,9 +1,9 @@
 Title: Aprendizagem e Programação
 Date: 2013-09-14
 Summary: Quem pensa que aprender a programar é coisa para gênios da matemática que vivem escondido num porão sem ver a luz do sol, está muito enganado!
-Image: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e02.jpg
-Thumbnail: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e02.jpg
-Audio: http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3
+Image: /images/e02.jpg
+Thumbnail: /images/e02.jpg
+Audio: http://curtocircuito.cc/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3
 Duration: 00:56:01
 
 Quem pensa que aprender a programar é coisa para gênios da matemática que vivem escondido num porão sem ver a luz do sol, está muito enganado!
@@ -16,9 +16,9 @@ Mulheres? A mesma coisa. Elas estão cada vez mais presente no mundo do software
 
 Quer ouvir um pouco das experiências da galera? Pegue a cerveja, aperte o play e participe deixando o seu comentário com opiniões, ideias, links, referências, etc.
 
-[!audio?type="audio/mpeg"](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3)
+[!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3)
 
-[Download do episódio](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3)
+[Download do episódio](http://curtocircuito.cc/episodes/curtocircuito-e02-aprendizagem-e-programacao.mp3)
 
 Edição: [Bruno Bastos](http://brucebastos.com/)
 

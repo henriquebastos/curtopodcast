@@ -1,9 +1,9 @@
 Title: Capture the Flag
 Date: 2013-11-17
 Summary: Viajamos nas competições hackers, exploramos suas diferentes modalidades e seguimos falando de segurança em geral. Este é um episódio recheado de links e referências para você passar o próximo mês aprendendo sobre o assunto.
-Image: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e03.jpg
-Thumbnail: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e03.jpg
-Audio: https://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e03-capture-the-flag.mp3
+Image: /images/e03.jpg
+Thumbnail: /images/e03.jpg
+Audio: http://curtocircuito.cc/episodes/curtocircuito-e03-capture-the-flag.mp3
 Duration: 01:10:59
 
 É isso aê, moçada! Mais um episódio no ar pra vocês. Desta vez o assunto é Capture the Flag e segurança da informação.
@@ -18,9 +18,9 @@ Divirtam-se e participem deixando seus comentários com opiniões, links, etc.
 
 []'s, HB!
 
-[!audio?type="audio/mpeg"](https://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e03-capture-the-flag.mp3)
+[!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e03-capture-the-flag.mp3)
 
-[Download do episódio](https://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e03-capture-the-flag.mp3)
+[Download do episódio](http://curtocircuito.cc/episodes/curtocircuito-e03-capture-the-flag.mp3)
 
 Edição: [Bruno Bastos](http://brucebastos.com/)
 

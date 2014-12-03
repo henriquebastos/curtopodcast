@@ -1,9 +1,9 @@
 Title: Money que é good nós num have
 Date: 2013-09-13
 Summary: Nesse nosso primeiro episódio o curto-circuito foi para falar do assunto que perturba todo mundo: dinheiro.
-Image: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e01-money-good-nos-num-have.jpg
-Thumbnail: http://curtopodcast.s3.amazonaws.com/uploads/zinnia/e01-money-good-nos-num-have.jpg
-Audio: http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3
+Image: /images/e01.jpg
+Thumbnail: /images/e01.jpg
+Audio: http://curtocircuito.cc/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3
 Duration: 01:38:43
 
 Quem nunca teve uma conversa no bar sobre os assuntos mais empolgantes e terminou dizendo que aquilo tinha que ser gravado? Aquele dia em que você tem certeza de que aprendeu mais com os amigos em algumas horas do que na faculdade inteira.
@@ -18,9 +18,9 @@ Aumentar a receita ou diminuir a despesa? Como economizar? Para que economizar? 
 
 Quer acompanhar? Pega sua cerveja, aperte o play e participe ativamente comentando e contribuindo com suas ideias.
 
-[!audio?type="audio/mpeg"](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3)
+[!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3)
 
-[Download do episódio](http://s3-sa-east-1.amazonaws.com/curtopodcast/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3)
+[Download do episódio](http://curtocircuito.cc/episodes/curtocircuito-e01-money-que-e-good-nos-num-have.mp3)
 
 Edição: [Diego Dukão](https://twitter.com/diegodukao)
 
