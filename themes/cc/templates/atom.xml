@@ -10,7 +10,7 @@
         <description>
             <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
         </description>
-        <lastBuildDate>{{ ""|isoformat }}</lastBuildDate>
+        <lastBuildDate>{{ ""|rfc2822 }}</lastBuildDate>
         <language>pt-br</language>
         <copyright><![CDATA[Attribution-ShareAlike 3.0 (CC BY-SA 3.0)]]></copyright>
         <managingEditor>henrique@bastos.net (Henrique Bastos)</managingEditor>
@@ -37,7 +37,7 @@
         <item>
             <link><![CDATA[{{ SITEURL }}/{{ item.url }}]]></link>
             <title><![CDATA[{{ item.title|striptags }}]]></title>
-            <pubDate>{{ item.date|isoformat }}</pubDate>
+            <pubDate>{{ item.date|rfc2822 }}</pubDate>
             <description><![CDATA[{{ item.summary|striptags or item.content|safe|striptags }}]]></description>
 
             <enclosure url="{{ item.audio }}" length="1" type="audio/mpeg"/>
