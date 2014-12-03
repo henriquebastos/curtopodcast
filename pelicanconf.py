@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from jinja_filters import rfc2822
 
 
 AUTHOR = 'Henrique Bastos'
@@ -61,15 +62,10 @@ THEME = "themes/cc"
 
 ITUNES_URL = 'https://itunes.apple.com/us/podcast/curto-circuito-podcast/id712723389'
 
-from datetime import datetime
-import pytz
 
-def isoformat(value):
-    value = value or datetime.today().replace(tzinfo=pytz.timezone(TIMEZONE))
-    return value.isoformat()
 
 JINJA_FILTERS = {
-    'isoformat': isoformat,
+    'rfc2822': rfc2822(TIMEZONE),
 }
 
 
