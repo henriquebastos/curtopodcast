@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from pyembed.markdown import PyEmbedMarkdown
-from markdown.extensions.nl2br import Nl2BrExtension
 
 
 AUTHOR = 'Henrique Bastos'
@@ -75,32 +73,15 @@ JINJA_FILTERS = {
 }
 
 
-from markdown.inlinepatterns import Pattern
-from markdown import Extension
+MD_EXTENSIONS = [
+    'markdown_audio',
+    'pyembed.markdown',
+    'markdown.extensions.nl2br',
+    'markdown.extensions.def_list',
+    'markdown.extensions.sane_lists',
+]
 
-class AudioPattern(Pattern):
-    PATTERN = '\[!audio(\?(?P<attr>.*))?\]\((?P<url>.*)\)'
 
-    def __init__(self, md):
-        super(AudioPattern, self).__init__(self.PATTERN)
 
-        self.md = md
 
-    def handleMatch(self, m):
-        params = m.groupdict()
-        print(params)
-        html = '<audio controls=""><source src="{url}" {attr}">Seu browser não suporta a tag de audio HTML5.</audio>'.format(**params)
-
-        return self.md.htmlStash.store(html)
-
-class AudioMarkdown(Extension):
-    def __init__(self, renderer=None):
-        super(AudioMarkdown, self).__init__()
-        self.renderer = renderer
-
-    def extendMarkdown(self, md, md_globals):
-        md.inlinePatterns.add(
-            'audio', AudioPattern(md), '_begin')
-
-MD_EXTENSIONS = [PyEmbedMarkdown(), Nl2BrExtension(), AudioMarkdown(), 'markdown.extensions.def_list', 'markdown.extensions.sane_lists']
 
