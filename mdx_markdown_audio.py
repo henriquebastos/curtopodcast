@@ -10,6 +10,7 @@ Install it on Pelican's config file:
 
 MD_EXTENSIONS = ['markdown_audio']
 """
+from __future__ import unicode_literals
 from markdown.inlinepatterns import Pattern
 from markdown import Extension
 
@@ -24,7 +25,6 @@ class AudioPattern(Pattern):
 
     def handleMatch(self, m):
         params = m.groupdict()
-        print(params)
         html = '<audio controls=""><source src="{url}" {attr}">Seu browser não suporta a tag de audio HTML5.</audio>'.format(**params)
 
         return self.md.htmlStash.store(html)
