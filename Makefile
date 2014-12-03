@@ -1,4 +1,4 @@
-PY?=python3
+PY?=$(VIRTUAL_ENV)/bin/python
 PELICAN?=pelican
 PELICANOPTS=
 
