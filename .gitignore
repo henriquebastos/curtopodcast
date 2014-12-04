@@ -12,3 +12,4 @@ tmp
 output/
 cache/
 *.mp3
+tmp-episode-tpl/
