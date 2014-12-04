@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="description" content="{% block meta_description %}{% endblock %}" />
+    <meta name="author" content="{{ AUTHOR }}" />
+
+    {% block meta %}{% endblock %}
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap-responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css" media="screen">
+    <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico" />
+    <link rel="home" href="{{ SITEURL }}" />
+
+    {% block link %}
+        <link rel="index" href="{{ SITEURL }}" />
+        <link rel="author" type="text/plain" href="http://henriquebastos.net" />
+    {% endblock %}
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    {% block script %}{% endblock %}
+</head>
+<body>
+    <!-- Container -->
+    <div id="container">
+
+        <!-- Header -->
+        <header>
+            <!-- Navbar
+            ================================================== -->
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a class="brand" href="/">
+                                <img alt="" src="{{ SITEURL }}/theme/img/logo.png">
+                            </a>
+                        </div>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#sobre">Sobre</a>
+                                </li>
+                                <li>
+                                    <a href="#contato">Contato</a>
+                                </li>
+                                <li>
+                                    <a href="{{ SITEURL }}/atoms.xml" alt="RSS">RSS</a>
+                                </li>
+                                <li>
+                                    <a href="{{ ITUNES_URL }}" alt="iTunes">iTunes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Content -->
+        <div class="content">
+            <div class="container">
+                <section class="blog">
+                    {% block content %}
+                    {% endblock %}
+                    <!-- End blog post -->
+                </section>
+            </div>
+        </div>
+        <!-- End content -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <section class="footer-widget">
+                    <div class="row-fluid">
+                        <div class="span3 text-widget widget">
+                            <a name="sobre"><h3><span>Sobre</span></h3></a>
+                            <p>Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir no melhor estilo "mesa de bar".</p>
+                            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a></p>
+                        </div>
+
+                        <div class="span3 post-widget widget">
+                            <h3 id="contact"><span>Fique por dentro</span></h3>
+                            <!-- Begin MailChimp Signup Form -->
+                            <form action="http://curtocircuito.us7.list-manage.com/subscribe/post?u=9a0e1dc5e836a4a32f96e73d5&amp;id=7deae15034" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div class="mc-field-group input-append">
+                                <input type="email" value="" name="EMAIL" placeholder="Digite seu email" class="required email" id="mce-EMAIL">
+                                <input type="submit" value="Vai!" name="subscribe" id="mc-embedded-subscribe" class="btn">
+                            </div>
+                            </form>
+                            <!--End mc_embed_signup-->
+
+                            <a href="http://facebook.com/curtopodcast" alt="Facebook"><img src="{{ SITEURL }}/theme/img/ico-facebook-dark.png" />  </a>
+                            <a href="http://twitter.com/curtopodcast" alt="Twitter"> <img src="{{ SITEURL }}/theme/img/ico-twitter-dark.png" />  </a>
+                            <a href="https://plus.google.com/b/104447350259243628172/104447350259243628172/posts" alt="Google+"><img src="{{ SITEURL }}/theme/img/ico-google-dark.png" />  </a>
+                            <a href="{{ SITEURL }}/atoms.xml" alt="RSS"><img src="{{ SITEURL }}/theme/img/ico-rss-dark.png" /></a>
+
+                        </div>
+
+
+                        <div class="span3 tweet-widget widget">
+                            <h3><span>Últimos</span> Tweets</h3>
+                            <!-- BEGIN: Twitter website widget (http://twitterforweb.com) -->
+                            <div style="width:220px;font-size:8px;text-align:right;"><script type="text/javascript">
+                                document.write(unescape("%3Cscript src='http://twitterforweb.com/twitterbox.js?username={{ TWITTER_USERNAME }}&settings=1,0,3,220,320,f4f4f4,0,000000,101010,1,2,336699' type='text/javascript'%3E%3C/script%3E"));</script>
+                            </div>
+                            <!-- END: Twitter website widget (http://twitterforweb.com) -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!--End Footer -->
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{ GOOGLE_ANALYTICS }}', 'curtocircuito.cc');
+            ga('send', 'pageview');
+        </script>
+    </div>
+</body>
+</html>

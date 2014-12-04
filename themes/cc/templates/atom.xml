@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[Curto Circuito Podcast]]></title>
+        <atom:link href="http://www.curtocircuito.cc/atom.xml" rel="self" type="application/rss+xml"/>
+        <link><![CDATA[http://curtocircuito.cc]]></link>
+        <description>
+            <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
+        </description>
+        <lastBuildDate>{{ ""|rfc2822 }}</lastBuildDate>
+        <language>pt-br</language>
+        <copyright><![CDATA[Attribution-ShareAlike 3.0 (CC BY-SA 3.0)]]></copyright>
+        <managingEditor>henrique@bastos.net (Henrique Bastos)</managingEditor>
+        <webMaster><![CDATA[henrique@bastos.net (Henrique Bastos)]]></webMaster>
+
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary>
+            <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
+        </itunes:summary>
+        <itunes:keywords></itunes:keywords>
+        <itunes:category text="Technology">
+            <itunes:category text="Podcasting"/>
+        </itunes:category>
+        <itunes:category text="Technology"/>
+        <itunes:author><![CDATA[Henrique Bastos]]></itunes:author>
+        <itunes:owner>
+            <itunes:name><![CDATA[Henrique Bastos]]></itunes:name>
+            <itunes:email><![CDATA[henrique@bastos.net]]></itunes:email>
+        </itunes:owner>
+        <itunes:image href="http://www.curtocircuito.cc/theme/img/itunes-image.png"/>
+        <itunes:explicit><![CDATA[No]]></itunes:explicit>
+
+        {% for item in dates %}
+        <item>
+            <link><![CDATA[{{ SITEURL }}/{{ item.url }}]]></link>
+            <title><![CDATA[{{ item.title|striptags }}]]></title>
+            <pubDate>{{ item.date|rfc2822 }}</pubDate>
+            <description><![CDATA[{{ item.summary|striptags or item.content|safe|striptags }}]]></description>
+
+            <enclosure url="{{ item.audio }}" length="1" type="audio/mpeg"/>
+            <guid>{{ item.audio }}</guid>
+
+            <itunes:author><![CDATA[Henrique Bastos]]></itunes:author>
+            <itunes:summary>
+                <![CDATA[{{ item.summary|striptags or item.content|safe|striptags }}]]>
+            </itunes:summary>
+            <itunes:image href="{{ item.image }}"/>
+            <itunes:duration>{{ item.duration }}</itunes:duration>
+            {% if item.tags %}<itunes:keywords>{{ item.tags }}</itunes:keywords>{% endif %}
+        </item>
+        {% endfor %}
+
+    </channel>
+</rss>

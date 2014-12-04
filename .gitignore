@@ -8,3 +8,8 @@ tmp
 *.ini
 .env
 .foreman
+.s3cfg
+output/
+cache/
+*.mp3
+tmp-episode-tpl/
