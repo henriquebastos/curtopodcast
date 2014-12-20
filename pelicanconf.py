@@ -14,7 +14,6 @@ AUTHOR = 'Henrique Bastos'
 SITENAME = 'Curto Circuito Podcast'
 
 SITEURL = 'http://curtocircuito.cc'
-SITEURL = 'http://curtocircuito.cc.s3-website-us-east-1.amazonaws.com'
 
 RELATIVE_URLS = True
 
