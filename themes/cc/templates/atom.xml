@@ -5,7 +5,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title><![CDATA[Curto Circuito Podcast]]></title>
-        <atom:link href="http://www.curtocircuito.cc/atom.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="http://curtocircuito.cc/atom.xml" rel="self" type="application/rss+xml"/>
         <link><![CDATA[http://curtocircuito.cc]]></link>
         <description>
             <![CDATA[Um bate-papo descontraído sobre tecnologia, nerdices e tudo o mais que a curiosidade pedir, no melhor estilo "mesa de bar".]]>
@@ -30,7 +30,7 @@
             <itunes:name><![CDATA[Henrique Bastos]]></itunes:name>
             <itunes:email><![CDATA[henrique@bastos.net]]></itunes:email>
         </itunes:owner>
-        <itunes:image href="http://www.curtocircuito.cc/theme/img/itunes-image.png"/>
+        <itunes:image href="http://curtocircuito.cc/theme/img/itunes-image.png"/>
         <itunes:explicit><![CDATA[No]]></itunes:explicit>
 
         {% for item in dates %}
