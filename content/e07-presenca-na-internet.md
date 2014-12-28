@@ -9,7 +9,7 @@ Status: draft
 
 Expor o que a gente pensa nem sempre é fácil. Autocríticas e críticas de pessoas que consideramos importantes são algumas das travas que impedem muita gente de compartilharem seus pensamentos e conhecimentos na web.
 
-No entanto é claro pra mim que os benefícios de ter uma presença na web são infinitamente maiores do que os riscos. Pra desbravarmos este tema e te encorajar a publicar suas ideias na rede, convidei o Bruce Bastos e o Pirulla para um curto circuito.
+No entanto é claro pra mim que os benefícios de ter uma presença na web são infinitamente maiores do que os riscos. Pra desbravarmos este tema e te encorajar a publicar suas ideias na rede, convidei o [Bruce Bastos](http://brucebastos.com/) e o [Pirulla](https://twitter.com/pirulla25) para um curto circuito.
 
 Neste episódio discutimos causos, oportunidades, perigos, dificuldades e os muitos benefícios usar a internet para interagir além do alcance.
 
