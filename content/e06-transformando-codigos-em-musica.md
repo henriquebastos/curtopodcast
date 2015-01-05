@@ -5,7 +5,6 @@ Image: /images/e06.jpg
 Thumbnail: /images/e06.jpg
 Audio: http://curtocircuito.cc/episodes/curtocircuito-e06-transformando-codigos-em-musica.mp3
 Duration: 00:58:52
-Status: draft
 
 Existe uma correlação muito grande entre gostar de programação e gostar de música.
 
