@@ -15,7 +15,7 @@ SITENAME = 'Curto Circuito Podcast'
 
 SITEURL = 'http://curtocircuito.cc'
 
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 TIMEZONE = 'America/Sao_Paulo'
 DEFAULT_LANG = 'pt'

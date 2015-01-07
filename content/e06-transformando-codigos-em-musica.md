@@ -6,13 +6,17 @@ Thumbnail: /images/e06.jpg
 Audio: http://curtocircuito.cc/episodes/curtocircuito-e06-transformando-codigos-em-musica.mp3
 Duration: 00:58:52
 
+Ano novo, episódio novo!
+
 Existe uma correlação muito grande entre gostar de programação e gostar de música.
 
 Neste curto circuito vamos juntar os dois assuntos! Pra isso convidei meus amigos [Diego Dukão](https://twitter.com/diegodukao), [Pedro Kroger](http://pedrokroger.net/) e [Danilo Bellini](https://twitter.com/danilobellini) para falarmos sobre música, programação e programação de música.
 
 Aproveite o papo, os links e manda ver nos comentários. ;)
 
-[]'s, [HB](http://fb.com/henriquebastos)!
+Um grande abraço e um 2015 totalmente excelente pra vc!
+
+[HB](http://fb.com/henriquebastos)!
 
 [!audio?type="audio/mpeg"](http://curtocircuito.cc/episodes/curtocircuito-e06-transformando-codigos-em-musica.mp3)
 

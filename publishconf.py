@@ -12,4 +12,3 @@ from pelicanconf import *
 
 SITEURL = 'http://curtocircuito.cc'
 FEED_DOMAIN = SITEURL
-RELATIVE_URLS = False
