@@ -2,3 +2,7 @@ pelican==3.5.0
 Markdown==2.5.2
 pyembed-markdown==1.1.0
 typogrify==2.0.7
+Unipath==1.0
+python-slugify==0.1.0
+livereload==2.3.2
+click==3.3
