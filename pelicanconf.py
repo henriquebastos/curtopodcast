@@ -7,7 +7,7 @@ import os
 # hack
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from jinja_filters import rfc2822
+from code.jinja_filters import rfc2822
 
 
 AUTHOR = 'Henrique Bastos'
@@ -64,7 +64,7 @@ JINJA_FILTERS = {
 
 
 MD_EXTENSIONS = [
-    'markdown_audio',
+    'code.markdown_audio',
     'pyembed.markdown',
     'markdown.extensions.nl2br',
     'markdown.extensions.def_list',
