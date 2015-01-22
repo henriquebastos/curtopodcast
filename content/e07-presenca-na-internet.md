@@ -5,7 +5,6 @@ Image: /images/e07.jpg
 Thumbnail: /images/e07.jpg
 Audio: http://curtocircuito.cc/episodes/curtocircuito-e07-presenca-na-internet.mp3
 Duration: 00:54:47
-Status: draft
 
 Expor o que a gente pensa nem sempre é fácil. Autocríticas e críticas de pessoas que consideramos importantes são algumas das travas que impedem muita gente de compartilharem seus pensamentos e conhecimentos na web.
 
