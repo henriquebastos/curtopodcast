@@ -6,3 +6,4 @@ Unipath==1.0
 python-slugify==0.1.0
 livereload==2.3.2
 click==3.3
+eyeD3==0.7.5
