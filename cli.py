@@ -3,7 +3,7 @@
 import click
 from livereload import Server, shell
 from code.config import ROOT, OUTPUT, CONTENT, EXTENSIONS
-from code.entry import entry, TEMPLATE
+from code.entry import next_entry, entry_factory
 
 
 @click.group()
@@ -36,26 +36,36 @@ def server(port=5500, output=OUTPUT, content=CONTENT, extensions=EXTENSIONS):
 
 
 @cli.command()
-@click.option('title', help='entry title')
-@click.option('audio', help='entry audio file')
-def make_entry(title, mp3):
-    assert title and mp3.exists(), 'Title and Episode file must be informed'
+@click.argument('title')
+@click.option('-e', '--episode', default=next_entry, help='entry title')
+@click.option('-a', '--audio', default=None)
+def entry(title, episode, audio):
+    """
+    Creating file-relative-to-cwd.md
+    Copying audio to file-relative-to-cwd.mp3
+    """
+    e = entry_factory(title, episode, audio)
 
-    e = entry(title, mp3)
+    post_text = CONTENT.child(e.markdown)
+    post_audio = CONTENT.child('episodes', e.audio)
 
-    text = CONTENT.child(e['markdown'])
-    audio = CONTENT.child('episodes', e['audio'])
+    if (not post_text.exists() or
+        click.confirm('{} already exists. Override?'.format(post_text), abort=True)):
+            click.echo('Writing entry: {}'.format(post_text))
+            e.save(post_text)
+            click.echo('Done')
 
-    if not text.exists():
-        text.write_file(TEMPLATE.strip().format(e))
+    if audio:
+        if (not post_audio.exists() or
+            click.confirm('{} already exists. Override?'.format(post_audio), abort=True)):
+                Path(audio).copy(post_audio)
+                click.echo('Done')
+        else:
+            click.echo('Doing nothing. Entry already exists: {}'.format(post_audio))
     else:
-        print('Doing nothing. File already exists: {}'.format(text))
+        click.echo('No audio defined.')
 
 
-    if not audio.exists():
-        mp3.copy(audio)
-    else:
-        print('Doing nothing. Entry already exists: {}'.format(audio))
 
 
 if __name__ == '__main__':
