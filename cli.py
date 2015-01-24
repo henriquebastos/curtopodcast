@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 from __future__ import unicode_literals
+import re
+import sys
+from subprocess import call
+
 import click
 import eyed3
 from eyed3.id3 import ID3_V2_3
 from livereload import Server, shell
-import re
 from unipath import Path
 
 from code.config import ROOT, OUTPUT, CONTENT, EXTENSIONS
@@ -118,6 +121,21 @@ def id3(audio, episode, title, image):
 
     # Print id3
     shell(['eyeD3', audio])
+
+@cli.command()
+@click.option('--dry-run', is_flag=True)
+def publish(dry_run):
+    BUCKET = 's3://curtocircuito.cc'
+
+    def run(args):
+        click.echo(' '.join(args))
+        call(args, stdout=sys.stdout, stderr=sys.stdout)
+
+    dry_option = '--dry-run' if dry_run else ''
+
+    run(['pelican', '-s', ROOT.child('publishconf.py'), '-o', OUTPUT])
+    run(['s3cmd', 'sync', dry_option, OUTPUT.child('episodes'), BUCKET, '--acl-public', '--guess-mime-type', '--config=.s3cfg'])
+    run(['s3cmd', 'sync', dry_option, OUTPUT + '/', BUCKET, '--acl-public', '--delete-removed', '--guess-mime-type', '--config=.s3cfg'])
 
 
 if __name__ == '__main__':
