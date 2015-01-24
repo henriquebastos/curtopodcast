@@ -13,3 +13,4 @@ output/
 cache/
 *.mp3
 tmp-episode-tpl/
+.ipynb_checkpoints
