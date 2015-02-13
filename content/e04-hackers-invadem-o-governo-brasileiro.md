@@ -3,7 +3,7 @@ Date: 2014-02-18
 Summary: É isso mesmo! O Governo Brasileiro foi invadido por hackers e eles estão publicando tudo quanto é dado. Transparência, dados abertos, hackathons, grupos de discussões de propostas de leis, mineiração de dados públicos e muitas outras iniciativas estão se tornando cada vez mais frequentes na esfera pública com o engajamento dessa galera.
 Image: /images/e04.jpg
 Thumbnail: /images/e04.jpg
-Audio: http://curtocircuito.cc/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3
+Audio: http://curtocircuito.cc/episodes/curtocircuito-e04-hackers-invadem-o-governo-brasileiro.mp3
 Duration: 01:07:44
 
 É isso mesmo! O Governo Brasileiro foi invadido por hackers e eles estão publicando tudo quanto é dado. Transparência, dados abertos, hackathons, grupos de discussões de propostas de leis, mineiração de dados públicos e muitas outras iniciativas estão se tornando cada vez mais frequentes na esfera pública com o engajamento dessa galera.

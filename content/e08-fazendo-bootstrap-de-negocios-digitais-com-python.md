@@ -1,11 +1,10 @@
 Title: Fazendo bootstrap de negócios digitais com Python
-Date: 2015-01-19
-Summary: Vamos conversar com David Cramer sobre como o ecossistema Python o ajudou na criação da sua startup Sentry. (inglês)
+Date: 2015-02-03
+Summary: (EN) Vamos conversar com David Cramer sobre como o ecossistema Python o ajudou na criação da sua startup Sentry.
 Image: /images/e08.jpg
 Thumbnail: /images/e08.jpg
 Audio: http://curtocircuito.cc/episodes/curtocircuito-e08-fazendo-bootstrap-de-negocios-digitais-com-python.mp3
 Duration: 00:50:16
-Status: draft
 
 O curto-circuito hoje é com [David Cramer](https://twitter.com/zeeg), figura conhecida nas comunidades Python e Django.
 
