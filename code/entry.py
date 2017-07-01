@@ -1,5 +1,5 @@
 # coding: utf-8
-from UserDict import UserDict
+from collections import MutableMapping as UserDict
 import re
 from datetime import date, time
 from subprocess import check_output, STDOUT
@@ -40,9 +40,11 @@ def last_entry(path=CONTENT, pattern='*.md'):
     """Last entry article file."""
     return path.listdir(pattern)[-1]
 
+
 def count_entries(path=CONTENT, pattern='*.md'):
     """Total of entries."""
     return len(path.listdir(pattern))
+
 
 def entry_date(post):
     """Returns the published date of an entry."""
@@ -57,13 +59,16 @@ def next_entry(path=CONTENT):
     """Number of the next entry"""
     return count_entries(path) + 1
 
+
 def next_date(**kwargs):
     """The last entry publication date incremented by kwargs"""
     return (entry_date(last_entry()) + relativedelta(**kwargs)).strftime('%Y-%m-%d')
 
+
 def serial(number):
     """Formated entry serial number used for ordering: e01, e02, ..."""
     return 'e{:0>2}'.format(number)
+
 
 def duration(audiofile):
     """Return a time with the episode duration."""
@@ -79,6 +84,7 @@ def duration(audiofile):
 
     return time(*map(int, match.groups())).strftime('%H:%M:%S')
 
+
 class Entry(UserDict):
     """Entry object"""
     def __getattr__(self, item):
@@ -88,6 +94,7 @@ class Entry(UserDict):
         with open(filename, 'w') as f:
             content = TEMPLATE.strip().format(**self)
             f.write(content.encode('utf-8'))
+
 
 def entry_factory(title, episode, audio):
     e = Entry({  # Attributes

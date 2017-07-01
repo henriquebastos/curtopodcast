@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
-from __future__ import unicode_literals
+import os
 import re
 import sys
 from subprocess import call
@@ -9,7 +8,7 @@ import click
 import eyed3
 from eyed3.id3 import ID3_V2_3
 from livereload import Server, shell
-from unipath import Path
+from pathlib import Path
 
 from code.config import ROOT, OUTPUT, CONTENT, EXTENSIONS
 from code.entry import next_entry, entry_factory
@@ -26,20 +25,20 @@ def server(port=5500, output=OUTPUT, content=CONTENT, extensions=EXTENSIONS):
     shell('make clean')
     shell('make html')
 
-    output.chdir()
+    os.chdir(output)
     server = Server()
 
-    cmd = 'pelican -s {} -o {}'.format(ROOT.child('pelicanconf.py'), output)
+    cmd = 'pelican -s {} -o {}'.format(str(ROOT / 'pelicanconf.py'), output)
 
     for ext in extensions:
-        print(content.child(ext))
-        server.watch(content.child(ext), cmd)
+        print(content / ext)
+        server.watch(str(content / ext), cmd)
 
-    print(ROOT.child('themes'))
-    server.watch(ROOT.child('themes'), cmd)
+    print(ROOT / 'themes')
+    server.watch(str(ROOT / 'themes'), cmd)
 
-    server.watch(output.child('*.html'))
-    server.watch(output.child('*.css'))
+    server.watch(str(output / '*.html'))
+    server.watch(str(output / '*.css'))
 
     server.serve(liveport=35729, port=port)
 
@@ -55,20 +54,20 @@ def entry(title, episode, audio):
     """
     e = entry_factory(title, episode, audio)
 
-    post_text = CONTENT.child(e.markdown)
-    post_audio = CONTENT.child('episodes', e.audio)
+    post_text = CONTENT / e.markdown
+    post_audio = CONTENT / 'episodes' / e.audio
 
     if (not post_text.exists() or
-        click.confirm('{} already exists. Override?'.format(post_text), abort=True)):
-            click.echo('Writing entry: {}'.format(post_text))
-            e.save(post_text)
-            click.echo('Done')
+            click.confirm('{} already exists. Override?'.format(post_text), abort=True)):
+        click.echo('Writing entry: {}'.format(post_text))
+        e.save(post_text)
+        click.echo('Done')
 
     if audio:
         if (not post_audio.exists() or
-            click.confirm('{} already exists. Override?'.format(post_audio), abort=True)):
-                Path(audio).copy(post_audio)
-                click.echo('Done')
+                click.confirm('{} already exists. Override?'.format(post_audio), abort=True)):
+            Path(audio).copy(post_audio)
+            click.echo('Done')
         else:
             click.echo('Doing nothing. Entry already exists: {}'.format(post_audio))
     else:
@@ -79,7 +78,8 @@ def entry(title, episode, audio):
 @click.argument('audio', type=click.Path(exists=True, dir_okay=False, resolve_path=True))
 @click.option('-e', '--episode', type=int)
 @click.option('-t', '--title', required=True)
-@click.option('-i', '--image', type=click.Path(exists=True, dir_okay=False, resolve_path=True), help='Image filename for cover art')
+@click.option('-i', '--image', type=click.Path(exists=True, dir_okay=False, resolve_path=True),
+              help='Image filename for cover art')
 def id3(audio, episode, title, image):
     """
     Update ID3 tags with episode info.
@@ -111,6 +111,7 @@ def id3(audio, episode, title, image):
         from eyed3.id3 import frames
         def force_latin1(self):
             self.encoding = eyed3.id3.LATIN1_ENCODING
+
         setattr(frames.ImageFrame, '_initEncoding', force_latin1)
 
         # force mime as str because eyeD3 uses it to compose the binary header
@@ -121,6 +122,7 @@ def id3(audio, episode, title, image):
 
     # Print id3
     shell(['eyeD3', audio])
+
 
 @cli.command()
 @click.option('--dry-run', is_flag=True)
@@ -133,9 +135,11 @@ def publish(dry_run):
 
     dry_option = '--dry-run' if dry_run else ''
 
-    run(['pelican', '-s', ROOT.child('publishconf.py'), '-o', OUTPUT])
-    run(['s3cmd', 'sync', dry_option, OUTPUT.child('episodes'), BUCKET, '--acl-public', '--guess-mime-type', '--config=.s3cfg'])
-    run(['s3cmd', 'sync', dry_option, OUTPUT + '/', BUCKET, '--acl-public', '--delete-removed', '--guess-mime-type', '--config=.s3cfg'])
+    run(['pelican', '-s', str(ROOT / 'publishconf.py'), '-o', str(OUTPUT)])
+    run(['s3cmd', 'sync', dry_option, str(OUTPUT / 'episodes'), BUCKET, '--acl-public', '--guess-mime-type',
+         '--config=.s3cfg'])
+    run(['s3cmd', 'sync', dry_option, str(OUTPUT) + '/', BUCKET, '--acl-public', '--delete-removed', '--guess-mime-type',
+         '--config=.s3cfg'])
 
 
 if __name__ == '__main__':

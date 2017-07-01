@@ -13,7 +13,7 @@ from code.jinja_filters import rfc2822
 AUTHOR = 'Henrique Bastos'
 SITENAME = 'Curto Circuito Podcast'
 
-SITEURL = 'http://curtocircuito.cc'
+SITEURL = ''#'http://curtocircuito.cc'
 
 RELATIVE_URLS = False
 
@@ -63,29 +63,27 @@ JINJA_FILTERS = {
 }
 
 
-MD_EXTENSIONS = [
-    'code.markdown_audio',
-    'pyembed.markdown',
-    'markdown.extensions.nl2br',
-    'markdown.extensions.def_list',
-    'markdown.extensions.sane_lists',
-]
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        'code.markdown_audio': {},
+        'pyembed.markdown': {},
+        'markdown.extensions.nl2br': {},
+        'markdown.extensions.def_list': {},
+        'markdown.extensions.sane_lists': {},
+    },
+    'output_format': 'html5',
+}
 
 
 # Following items are often useful when publishing
 DISQUS_SITENAME = "curtocircuitopodcast"
 GOOGLE_ANALYTICS = "UA-43277110-1"
-TWITTER_USERNAME="curtopodcast"
+TWITTER_USERNAME = "curtopodcast"
 ITUNES_URL = 'https://itunes.apple.com/us/podcast/curto-circuito-podcast/id712723389'
 
-
-# Blogroll
-"""
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
-"""
 
 # Social widget
 SOCIAL = (
